@@ -9,7 +9,8 @@ var p = fmt.Println
 
 func PrintMe(outText string) {
 	p(outText)
-	var ind = s.Index(outText, " ")
+	// Walrus operator is cool ...
+	ind := s.Index(outText, " ")
 	p(s.Replace(outText, " ", "", ind))
 	p(s.ToUpper((outText)))
 }

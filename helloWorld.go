@@ -1,9 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	s "strings"
+)
+
+var p = fmt.Println
 
 func PrintMe(outText string) {
-	fmt.Println(outText)
+	p(outText)
+	var ind = s.Index(outText, " ")
+	p(s.Replace(outText, " ", "", ind))
+	p(s.ToUpper((outText)))
 }
 
 func main() {
